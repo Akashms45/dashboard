@@ -3,12 +3,12 @@ import logo from "../../assest/profilepic.jpg";
 export const Navbar = () => {
   return (
     <nav
-      className="h-12 sm:h-16 md:h-24 w-screen
+      className="h-12 sm:h-16 md:h-24 w-full
   bg-neutral-100 shadow-inner flex items-center justify-between 
-  px-2 sm:px-4 md:px-6 ml-72 m-5 rounded-xl "
+  px-2 sm:px-34 md:px-12 ml-1 m-5 rounded-xl "
     >
       <div className="shadow-inner flex bg-white items-center gap-2 bg-gray-100 px-8 py-3 rounded-full">
-        <span className="material-icons-outlined mr-6 text-gray-500 ">
+        <span className="material-icons-outlined mr-5 text-gray-500 ">
           search
         </span>
         <input
@@ -32,9 +32,9 @@ export const Navbar = () => {
             alt="profile_pic"
             className="w-18 h-20 rounded-full object-cover border"
           />
-          <div className="flex flex-col mr-16">
+          <div className="flex flex-col ">
             <p className="text-xl font-semibold text-gray-800">Name</p>
-            <p className="text-lg text-gray-500">example@mail.com</p>
+            <p className="text-lg text-gray-500">example@mail.com </p>
           </div>
         </div>
       </div>
