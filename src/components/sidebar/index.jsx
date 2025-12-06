@@ -11,7 +11,7 @@ export const Sidebar = () => {
   };
 
   return (
-    <aside className=" fixed top-4 left-6 h-[939px] w-16  sm:w-40 md:w-60 bg-neutral-100 shadow-inner transition-all duration-300  rounded-xl">
+    <aside className=" top-4 left-6 h-[939px] w-16  sm:w-40 md:w-60 bg-neutral-100 shadow-inner transition-all duration-300  rounded-xl">
       <div className="flex items-center p-4 ml-4">
         <img
           src={logo}
