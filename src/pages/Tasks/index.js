@@ -1,7 +1,7 @@
 import { Sidebar } from "../../components/sidebar";
 import { Navbar } from "../../components/navbar";
 
-export const tasks = () => {
+export const Tasks = () => {
   return (
     <>
       <div className="flex">
