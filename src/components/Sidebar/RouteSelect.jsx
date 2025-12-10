@@ -30,7 +30,7 @@ export const RouteSelect = ({ open }) => {
   ];
 
   return (
-    <div className="space-y-4 group ">
+    <div className="space-y-4 ">
       {/* MENU SECTION */}
       <div>
         <p className="px-4 mt-10 text-xs font-semibold text-stone-500 cursor-pointer ">
@@ -71,7 +71,7 @@ const RouteItem = ({ Icon, selected, title, path, open }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full p-1">
+    <div className="relative w-full p-1 group">
       {selected && (
         <motion.div
           layoutId="activeRoute"
@@ -96,16 +96,19 @@ const RouteItem = ({ Icon, selected, title, path, open }) => {
 
         {open && <span className="text-sm">{title}</span>}
 
-        {/* Tooltip when collapsed */}
-        {/* {!open && (
+        {!open && (
           <div
-            className="absolute left-12 bg-black text-white text-xs px-2 py-1 rounded opacity-0 
-            invisible group-hover:visible group-hover:opacity-100
-            transition-all duration-200 whitespace-nowrap shadow-lg z-50 overflow-hidden"
+            className="
+      absolute left-10 top-1/2 -translate-y-1/2
+              bg-stone-400 text-black text-xs px-3 py-1.5 rounded 
+              opacity-0 group-hover:opacity-100 group-hover:visible 
+              invisible transition-all duration-200 whitespace-nowrap 
+              z-50 shadow-lg
+    "
           >
             {title}
           </div>
-        )} */}
+        )}
       </button>
     </div>
   );
