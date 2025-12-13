@@ -33,7 +33,6 @@ function App() {
         md:grid-cols-[auto_1fr]
       "
     >
-      {/* DESKTOP SIDEBAR */}
       <Sidebar
         open={open}
         setOpen={setOpen}
@@ -41,21 +40,17 @@ function App() {
         setMobileOpen={setMobileOpen}
       />
 
-      {/* CONTENT AREA */}
       <div className="grid gap-4 grid-rows-[auto_1fr]">
-        {/* DESKTOP NAVBAR */}
+        \{" "}
         <div className="hidden md:block">
           <Navbar setMobileOpen={setMobileOpen} />
         </div>
-
-        {/* MOBILE SEARCH (only when opened) */}
+        \{" "}
         {showMobileSearch && (
           <div className="px-2 md:hidden">
             <Search open={showMobileSearch} setOpen={setShowMobileSearch} />
           </div>
         )}
-
-        {/* DASHBOARD */}
         <Dashboard
           mobileOpen={mobileOpen}
           setMobileOpen={setMobileOpen}

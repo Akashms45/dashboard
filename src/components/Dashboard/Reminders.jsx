@@ -1,4 +1,3 @@
-import React from "react";
 import { MdVideoCameraFront } from "react-icons/md";
 
 export const Reminders = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import bg from "../../assest/bg.jpg";
 import { motion } from "framer-motion";
 import { FiPause, FiPlay, FiStopCircle } from "react-icons/fi";

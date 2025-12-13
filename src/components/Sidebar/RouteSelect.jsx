@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
@@ -31,7 +30,6 @@ export const RouteSelect = ({ open }) => {
 
   return (
     <div className="space-y-4 ">
-      {/* MENU SECTION */}
       <div>
         <p className="px-4 mt-10 text-xs font-semibold text-stone-500 cursor-pointer ">
           MENU
@@ -46,7 +44,6 @@ export const RouteSelect = ({ open }) => {
         ))}
       </div>
 
-      {/* GENERAL SECTION */}
       <div>
         <p className="px-4 mt-10 text-xs font-semibold text-stone-500 ">
           GENERAL

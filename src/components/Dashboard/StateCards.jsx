@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import { MdArrowDropDown, MdArrowDropUp } from "react-icons/md";
 

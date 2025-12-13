@@ -1,4 +1,3 @@
-import React from "react";
 import { Search } from "./Search";
 import { MsgBell } from "./MsgBell";
 import { AccountToggle } from "./AccountToggle";

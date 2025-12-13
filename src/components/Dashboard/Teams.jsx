@@ -40,7 +40,6 @@ export const Teams = () => {
 
   return (
     <div className="border bg-white rounded-xl p-6 flex flex-col min-h-[200px]">
-      {/* Header */}
       <div className="flex justify-between items-center mb-4">
         <h1 className="font-bold text-lg truncate">Team Collaboration</h1>
         <button className="truncate border border-green-800 rounded-full px-3 py-1 text-sm text-green-800 hover:bg-green-100">
@@ -48,26 +47,21 @@ export const Teams = () => {
         </button>
       </div>
 
-      {/* Members List */}
       <div className="flex flex-col space-y-4">
         {projects.map((project) => (
           <div key={project.id} className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              {/* Avatar */}
               <img
                 src={project.logo}
                 alt={project.FirstName}
                 className="w-10 h-10 rounded-full object-cover"
               />
 
-              {/* Text */}
               <div className="w-full">
-                {/* NAME (one line only) */}
                 <p className="font-semibold truncate w-full">
                   {project.FirstName}
                 </p>
 
-                {/* WORK (clamped to 2 lines) */}
                 <p className="text-gray-500 text-sm line-clamp-2 w-full">
                   Working on{" "}
                   <span className="text-black font-medium">{project.work}</span>
@@ -75,7 +69,6 @@ export const Teams = () => {
               </div>
             </div>
 
-            {/* Status Badge */}
             <span
               className={`text-xs px-3 py-1 rounded-lg font-medium truncate ${
                 statusColors[project.status]

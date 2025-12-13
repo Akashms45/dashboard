@@ -10,7 +10,6 @@ export const Dashboard = ({
 }) => {
   return (
     <div className="bg-neutral-100 rounded-lg shadow border">
-      {/* MOBILE HEADER ONLY */}
       <div className="md:hidden">
         <MobileHeader
           setMobileOpen={setMobileOpen}

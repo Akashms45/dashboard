@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-import { FiCommand, FiMail, FiSearch } from "react-icons/fi";
+import { useState } from "react";
+import { FiCommand, FiSearch } from "react-icons/fi";
 import { CommandMenu } from "./CommandMenu";
-import { MsgBell } from "./MsgBell";
-import { AccountToggle } from "./AccountToggle";
 
 export const Search = () => {
   const [open, setOpen] = useState();

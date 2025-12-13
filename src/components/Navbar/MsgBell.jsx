@@ -1,4 +1,3 @@
-import React from "react";
 import { FiBell, FiMail } from "react-icons/fi";
 
 export const MsgBell = () => {

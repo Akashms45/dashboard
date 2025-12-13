@@ -15,19 +15,16 @@ export const UnderGrid = () => {
         lg:grid-cols-[2fr_1.3fr_1.2fr]
       "
     >
-      {/* LEFT COLUMN */}
       <div className="flex flex-col gap-5">
         <DayBar />
         <Teams />
       </div>
 
-      {/* MIDDLE COLUMN */}
       <div className="flex flex-col gap-5">
         <Reminders />
         <Progress />
       </div>
 
-      {/* RIGHT COLUMN */}
       <div className="flex flex-col gap-5">
         <ProjectList />
         <TimeTracker />

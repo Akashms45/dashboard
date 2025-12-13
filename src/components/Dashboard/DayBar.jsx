@@ -1,5 +1,3 @@
-import React from "react";
-
 export const DayBar = () => {
   const days = [
     { label: "S", height: "h-20", color: "gray" },
@@ -18,14 +16,11 @@ export const DayBar = () => {
     <div className="rounded-xl border bg-white p-6 min-h-[200px]">
       <h1 className="font-bold mb-4 text-lg truncate">Project Analytics</h1>
 
-      {/* Short container just like the screenshot */}
       <div className="flex justify-between items-end h-40">
         {days.map((day, index) => (
           <div key={index} className="flex flex-col-reverse items-center">
-            {/* Label */}
             <span className="mt-2 text-sm truncate">{day.label}</span>
 
-            {/* Bar */}
             <div
               className={`
                 w-10 rounded-full border truncate

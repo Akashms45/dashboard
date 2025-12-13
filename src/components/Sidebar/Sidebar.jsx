@@ -1,4 +1,3 @@
-import React from "react";
 import { CmpLogo } from "./CmpLogo";
 import { RouteSelect } from "./RouteSelect";
 import { AppDownload } from "./AppDownload";

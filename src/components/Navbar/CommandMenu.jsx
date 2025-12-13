@@ -4,7 +4,6 @@ import { FiEye, FiLink, FiLogOut, FiPhone, FiPlus } from "react-icons/fi";
 
 export const CommandMenu = ({ open, setOpen }) => {
   const [value, setValue] = useState();
-  // Toggle the menu when ⌘K is pressed
   useEffect(() => {
     const down = (e) => {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
@@ -15,7 +14,7 @@ export const CommandMenu = ({ open, setOpen }) => {
 
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
-  }, []);
+  }, [setOpen]);
 
   return (
     <Command.Dialog
