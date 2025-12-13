@@ -41,11 +41,10 @@ function App() {
       />
 
       <div className="grid gap-4 grid-rows-[auto_1fr]">
-        \{" "}
+        {" "}
         <div className="hidden md:block">
           <Navbar setMobileOpen={setMobileOpen} />
-        </div>
-        \{" "}
+        </div>{" "}
         {showMobileSearch && (
           <div className="px-2 md:hidden">
             <Search open={showMobileSearch} setOpen={setShowMobileSearch} />
