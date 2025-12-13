@@ -2,6 +2,7 @@ import React from "react";
 import { CmpLogo } from "./CmpLogo";
 import { RouteSelect } from "./RouteSelect";
 import { AppDownload } from "./AppDownload";
+import { AccountToggle } from "../Navbar/AccountToggle";
 
 export const Sidebar = ({ open, setOpen, mobileOpen, setMobileOpen }) => {
   return (
@@ -9,7 +10,7 @@ export const Sidebar = ({ open, setOpen, mobileOpen, setMobileOpen }) => {
       <div
         className={`
         
-        bg-neutral-100 border shadow h-screen rounded-lg
+        bg-neutral-100 border shadow h-auto rounded-lg
         hidden md:block                             
         transition-all duration-500 ease-in-out
         ${open ? "md:w-48" : "md:w-20"}
@@ -33,6 +34,9 @@ export const Sidebar = ({ open, setOpen, mobileOpen, setMobileOpen }) => {
           >
             <CmpLogo open={true} toggleSidebar={() => setMobileOpen(false)} />
             <RouteSelect open={true} />
+            <div className="mt-56">
+              <AccountToggle />
+            </div>
           </div>
         </div>
       )}

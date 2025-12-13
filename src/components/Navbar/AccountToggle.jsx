@@ -1,9 +1,7 @@
-import React, { use } from "react";
 import profile from "../../assest/profilepic.jpg";
 
 export const AccountToggle = () => {
   const fullName = "Totok Michael";
-  const firstName = "Totok";
   const email = "tmichael20@mail.com";
   return (
     <button
@@ -18,11 +16,8 @@ export const AccountToggle = () => {
         src={profile}
         alt="profile"
       />
-      <span className="text-lg font-semibold text-stone-800 md:hidden">
-        {firstName}
-      </span>
 
-      <div className="hidden md:block text-left">
+      <div className=" text-left ">
         <span className="text-lg font-semibold text-stone-800 block">
           {fullName}
         </span>

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Sidebar } from "./components/Sidebar/Sidebar";
 import { Dashboard } from "./components/Dashboard/Dashboard";
-import { Navbar } from "../src/components/Navbar/Navbar";
-import { resize } from "framer-motion";
+import { Navbar } from "./components/Navbar/Navbar";
+import { Search } from "./components/Navbar/Search";
 
 function App() {
   const [open, setOpen] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [showMobileSearch, setShowMobileSearch] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,7 +33,7 @@ function App() {
         md:grid-cols-[auto_1fr]
       "
     >
-      {/* Sidebar */}
+      {/* DESKTOP SIDEBAR */}
       <Sidebar
         open={open}
         setOpen={setOpen}
@@ -40,13 +41,27 @@ function App() {
         setMobileOpen={setMobileOpen}
       />
 
-      {/* Content */}
-      <div className="grid gap-4 grid-rows-[80px_1fr]">
-        <div className="hidden sm:block">
+      {/* CONTENT AREA */}
+      <div className="grid gap-4 grid-rows-[auto_1fr]">
+        {/* DESKTOP NAVBAR */}
+        <div className="hidden md:block">
           <Navbar setMobileOpen={setMobileOpen} />
         </div>
 
-        <Dashboard />
+        {/* MOBILE SEARCH (only when opened) */}
+        {showMobileSearch && (
+          <div className="px-2 md:hidden">
+            <Search open={showMobileSearch} setOpen={setShowMobileSearch} />
+          </div>
+        )}
+
+        {/* DASHBOARD */}
+        <Dashboard
+          mobileOpen={mobileOpen}
+          setMobileOpen={setMobileOpen}
+          setSearchVisible={setShowMobileSearch}
+          setOpen={setOpen}
+        />
       </div>
     </main>
   );
